@@ -53,7 +53,7 @@ class DBStorage:
         to_query = []
         new_dict = {}
         if cls is not None:
-            results = self.__session.query(eval(cls)).all()
+            results = self.__session.query(eval(cls.__name__)).all()
             for row in results:
                 key = row.__class__.__name__ + '.' + row.id
                 new_dict[key] = row
