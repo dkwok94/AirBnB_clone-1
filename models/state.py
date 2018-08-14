@@ -9,6 +9,7 @@ from sqlalchemy.orm import relationship
 from sqlalchemy import Column, String
 from os import getenv
 
+
 class State(BaseModel, Base):
     '''
         Implementation for the State.
