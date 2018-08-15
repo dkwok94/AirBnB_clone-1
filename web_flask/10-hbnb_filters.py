@@ -7,6 +7,7 @@ from flask import Flask
 from flask import render_template
 from models import storage
 from models.state import State
+from models.amenity import Amenity
 
 app = Flask(__name__)
 
@@ -106,12 +107,19 @@ def states_id(id):
             return render_template('9-states.html', state=state)
     return render_template('9-states.html')
 
+
 @app.route('/hbnb_filters', strict_slashes=False)
 def hbnb_filters():
     """
         Returns an HTML page of the HBNB website
     """
-    return render_template('10-hbnb_filters.html')
+    amenities = storage.all(Amenity).values()
+    states = storage.all(State).values()
+    return render_template(
+        '10-hbnb_filters.html',
+        amenities=amenities,
+        states=states)
+
 
 @app.teardown_appcontext
 def close_db(error):
