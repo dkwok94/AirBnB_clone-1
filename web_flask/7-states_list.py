@@ -5,7 +5,6 @@ Flask web application
 
 from flask import Flask
 from flask import render_template
-from flask import g
 from models import storage
 from models.state import State
 
@@ -80,8 +79,7 @@ def get_states_list():
 
 @app.teardown_appcontext
 def close_db(error):
-    if hasattr(g, 'storage'):
-        g.storage.close()
+    storage.close()
 
 
 if __name__ == '__main__':
