@@ -59,6 +59,7 @@ button:hover{
     padding-bottom: 10%;
     overflow: scroll;
     max-height: 300px;
+    position: relative;
 }
 .popover li h2{
     font-size: 16px;
