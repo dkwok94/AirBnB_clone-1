@@ -66,7 +66,7 @@ class testDBStorage(unittest.TestCase):
         '''
         state = State(name="Washington")
         city = City(name="Seattle", state_id=state.id)
-        user = User(email="@holberton", password="pwd")
+        user = User(email="@dhk", password="pwd")
         place = Place(city_id=city.id, user_id=user.id, name="House",
                       number_rooms=2, number_bathrooms=1, max_guest=2,
                       price_by_night=50)

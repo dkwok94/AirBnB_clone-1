@@ -11,7 +11,7 @@ sudo mkdir -p /data/web_static/shared/
 
 # Create fake HTML file
 touch /data/web_static/releases/test/index.html
-echo -e "<html>\n\t<head>\n\t</head>\n\t<body>\n\t\tHolberton School\n\t</body>\n</html>" > /data/web_static/releases/test/index.html
+echo -e "<html>\n\t<head>\n\t</head>\n\t<body>\n\t\tDHK School\n\t</body>\n</html>" > /data/web_static/releases/test/index.html
 
 # Create symbolic link
 sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
